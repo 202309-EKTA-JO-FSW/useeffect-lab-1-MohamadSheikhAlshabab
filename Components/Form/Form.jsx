@@ -5,6 +5,7 @@ export default function Form({ setNumberOfDogs }) {
   // How can we manage the number of dogs?
 
   const [inputText, setInputText] = useState("");
+  
   return (
     <form>
       <h3>Number of cute dogs is infinite!</h3>
@@ -23,7 +24,7 @@ export default function Form({ setNumberOfDogs }) {
         <button
           onClick={(e) => {
             e.preventDefault();
-            // When we click on the WOOF! button, what happens?
+            setNumberOfDogs(inputText)
           }}
           type="submit"
           className="btn btn-primary"
